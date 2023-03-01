@@ -1,0 +1,62 @@
+progress[value]::-webkit-progress-bar {
+  background-color: #dddddd;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+.v70::-webkit-progress-value {
+  background: rgb(194, 191, 14);
+}
+.v40::-webkit-progress-value {
+  background: rgb(192, 82, 9);
+}
+.v15::-webkit-progress-value {
+  background: rgb(155, 7, 15);
+}
+
+.disabled{
+  border: 1px solid grey !important;
+  color: grey !important;
+}
+
+#shop{
+  position: absolute;
+  background-color: #2b2b2b;
+  top: 0;
+  left: -100%;
+  transition: 0.3s;
+  z-index: 1;
+}
+
+.visible{
+  left: 0 !important;
+}
+
+#mob:active{
+  transition: 0.1s;
+  transform: translateY(-10px);
+}
+
+.MobSpawn{
+  animation: mobSpawn 1.5s linear;
+  position: relative;
+}
+
+@keyframes mobSpawn{
+  0%{
+    transform: scale(0) rotateX(0deg) rotateY(0deg);
+  }
+  100%{
+    transform: scale(1) rotateX(360deg) rotateY(360deg); 
+  }
+}
+
+@keyframes mobDeSpawn{
+  0%{
+    transform: scale(1) rotateX(360deg) rotateY(360deg); 
+
+  }
+  100%{
+    transform: scale(0) rotateX(0deg) rotateY(0deg);
+  }
+}
