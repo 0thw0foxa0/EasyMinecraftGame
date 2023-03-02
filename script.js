@@ -87,6 +87,7 @@ else if(cash>=arrCost[num])
 }}
 
 function spawnMob(){
+    document.getElementById('clicker').removeAttribute("disabled");
     document.getElementById('mob').src='./mobs/' + mobNum + '.png'
     document.getElementById('file').max=arrHpMobs[mobNum];
     document.getElementById('file').value=arrHpMobs[mobNum];
@@ -122,6 +123,7 @@ function deSpawnMob(){
     document.getElementById('continue').classList.toggle("disabled");
     document.getElementById('continue').removeAttribute("disabled");
     
+    
 }
 
 function notEnoughtMoney(){
@@ -156,6 +158,7 @@ document.getElementById('cashShop').innerHTML=Number((cash).toFixed(1))
 document.getElementById('mob').classList.remove('MobSpawn');
 document.getElementById('mob').classList.add('MobDeSpawn');
 document.getElementById('name').innerHTML="Вы отпиздили "+arrMobs[mobNum-1]+"<br> Хотите продолжить?";
+document.getElementById('clicker').setAttribute("disabled","");
 setTimeout(deSpawnMob, 1500);
 if(arrHpMobs[mobNum]<=0 && mobNum==13)
 {
