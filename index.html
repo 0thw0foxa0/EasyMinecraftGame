@@ -11,7 +11,7 @@
 </head>
 <body>
 
-    <div id="shop" class="w-[800px] h-full">
+    <div id="shop" class="w-[500px] h-full">
         <h1 class="text-slate-400 text-3xl font-bold text-center p-2">Магазин</h1>
         <div class="flex justify-end gap-2 mb-10">
             <h1 id="cashShop"class="text-green-300 text-xl font-bold text-center">0</h1>
@@ -20,28 +20,28 @@
         <div class="">
 
             <div class="flex gap-4 p-6">
-                <img src="./shop/sword_1.png" alt="" width="100px">
+                <img src="./shop/sword_1.png" alt="" width="130px">
                 <div class="">
                     <p class="text-lg text-purple-300">Железная перделка</p>
-                    <p class="text-lg text-red-500 mb-2" id="sword0">Цена: 100 изумрудов <br> + 10 урона за клик <br> У вас: 0</p>
+                    <p class="text-lg text-red-500 mb-2" id="sword0">Цена: 100 изумрудов <br> + 2 урона за клик <br> У вас: 0</p>
                     <button class="rounded-md border border-green-500 text-green-500 text-lg text-center px-6 py-0.5" onclick="BuySword('0')">купить</button>
                 </div>
             </div>
 
             <div class="flex gap-4 p-6">
-                <img src="./shop/sword_2.png" alt="" width="100px">
+                <img src="./shop/sword_2.png" alt="" width="130px">
                 <div class="">
                     <p class="text-lg text-purple-300">Алмазная валына</p>
-                    <p class="text-lg text-red-500 mb-2" id="sword1">Цена: 1000 изумрудов <br> + 150 урона за клик  <br> У вас: 0</p>
+                    <p class="text-lg text-red-500 mb-2" id="sword1">Цена: 1000 изумрудов <br> + 15 урона за клик  <br> У вас: 0</p>
                     <button class="rounded-md border border-green-500 text-green-500 text-lg text-center px-6 py-0.5" onclick="BuySword('1')">купить</button>
                 </div>
             </div>
 
             <div class="flex gap-4 p-6">
-                <img src="./shop/sword_3.png" alt="" width="100px">
+                <img src="./shop/sword_3.png" alt="" width="120px">
                 <div class="">
                     <p class="text-lg text-purple-300">Блестяшка синяя</p>
-                    <p class="text-lg text-red-500 mb-2" id="sword2">Цена: 10 000 изумрудов <br> + 1000 урона за клик <br> У вас: 0</p>
+                    <p class="text-lg text-red-500 mb-2" id="sword2">Цена: 10 000 изумрудов <br> + 120 урона за клик <br> У вас: 0</p>
                     <button class="rounded-md border border-green-500 text-green-500 text-lg text-center px-6 py-0.5" onclick="BuySword('2')">купить</button>
                 </div>
             </div>
@@ -58,7 +58,7 @@
             </div>
             <div class="flex items-end w-full flex-col mb-36">
                 <button id="btnShop" onclick="OpenCloseShop()" class="flex items-center mb-4 gap-2">
-                    <h1 class="text-slate-400 text-2xl font-bold text-center">Магазин</h1>
+                    <h1 class="text-slate-400 text-2xl font-bold text-center" id="Damage">Магазин <br> У вас 1 урона за клик</h1>
                     <img src="./shop/shop.png" alt="" width="70px">
                 </button>
                 <div class="flex items-center gap-2">
@@ -67,16 +67,16 @@
                 </div>
             </div>
             <div class="flex items-center justify-center flex-col mb-6">
-                <div class="mb-4">
+                <div class="mb-4 text-center">
                     <h1 id="name" class="text-slate-500 text-2xl font-bold text-center mb-2">Селёдка какая-то дырявая</h1>  <!-- name  -->
-                    <progress id="file" max="100" value="100"  class=""></progress> <!-- mobHP где-то тут надо как то захуярить  -->
+                    <progress id="file" max="150" value="150"  class=""></progress> <!-- mobHP где-то тут надо как то захуярить  -->
                 </div>
-                <button onclick="DamageClick()">
-                    <img src="./mobs/0.png" alt="" width="200px" id="mob" class="MobSpawn"> <!-- mob  -->
+                <button onclick="DamageClick()" id="Clicker">
+                    <img src="./mobs/0.png" alt="" width="250px" id="mob" class="MobSpawn"> <!-- mob  -->
                 </button>
             </div>
             <div class="flex items-center justify-center">
-                <button  disabled class="disabled px-10 py-1 rounded-md border border-red-500 text-red-500 text-xl font-bold text-center">
+                <button id="continue" disabled class="disabled px-10 py-1 rounded-md border border-red-500 text-red-500 text-xl font-bold text-center" onclick="spawnMob()">
                     Продолжить
                 </button>
             </div>

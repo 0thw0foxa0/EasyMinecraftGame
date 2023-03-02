@@ -41,6 +41,10 @@ progress[value]::-webkit-progress-bar {
   animation: mobSpawn 1.5s linear;
   position: relative;
 }
+.MobDeSpawn{
+  animation: mobDeSpawn 1.5s linear;
+  position: relative;
+}
 
 @keyframes mobSpawn{
   0%{
